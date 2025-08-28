@@ -1,0 +1,146 @@
+/* General Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e3c72;
+  padding: 12px 24px;
+  color: white;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ff9800;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 6px 14px;
+  border: 1px solid white;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white !important;
+  font-size: 14px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  color: #1e3c72 !important;
+}
+
+.signup {
+  background: #ff9800;
+  border: none;
+  color: white !important;
+}
+
+.signup:hover {
+  background: #e68900;
+  color: white !important;
+}
+
+/* Hamburger (hidden on desktop) */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Mobile Menu (hidden by default) */
+.mobile-menu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background: #2a5298;
+  padding: 20px;
+  display: none;   /* hidden initially */
+  flex-direction: column;
+  gap: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 999;
+}
+
+.mobile-menu.active {
+  display: flex;   /* shown when toggled */
+}
+
+.mobile-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.mobile-menu a:hover {
+  color: #ff9800;
+}
+
+.mobile-auth {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.mobile-auth .btn {
+  color: white !important;
+}
+
+.mobile-auth .signup {
+  background: #ff9800;
+  border: none;
+  color: white !important;
+}
+
+.mobile-auth .signup:hover {
+  background: #e68900;
+  color: white !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links,
+  .auth-buttons {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

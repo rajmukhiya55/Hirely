@@ -1,0 +1,372 @@
+/* General Layout */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafc;
+  line-height: 1.6; /* better readability */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hero Section */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  text-align: center;
+  color: white;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-container::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.home-content {
+  max-width: 700px;
+  z-index: 2;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.home-title .highlight {
+  color: #f27c24;
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  opacity: 0.95;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.search-bar input {
+  width: 60%;
+  padding: 12px 15px;
+  border-radius: 30px 0 0 30px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.search-bar .search-btn {
+  background: #f27c24;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: white;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.search-bar .search-btn:hover {
+  background: #e66e10;
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.browse-btn {
+  background: #f27c24;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.post-btn {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.browse-btn:hover,
+.post-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* For Job Seekers & Employers Section */
+.audience-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 60px 20px;
+  background: #2563eb;
+}
+
+.audience-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  width: 400px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.audience-card:hover {
+  transform: translateY(-5px);
+}
+
+.audience-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.audience-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: white;
+}
+
+.audience-icon.blue { background: #2563eb; }
+.audience-icon.orange { background: #f97316; }
+
+.audience-card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.audience-card p {
+  margin: 10px 0 20px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.audience-card ul {
+  margin: 0 0 20px;
+  padding-left: 20px;
+  color: #374151;
+}
+
+.audience-card ul li {
+  margin-bottom: 8px;
+}
+
+.audience-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.audience-btn.blue { background: #2563eb; color: white; }
+.audience-btn.orange { background: #f97316; color: white; }
+
+.audience-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+/* Features Section */
+.features-section {
+  background: #f9fafb;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.features-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1e3c72;
+}
+
+.features-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.feature-card h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+.icon {
+  font-size: 2rem;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 50%;
+  color: white;
+}
+
+.icon.blue { background: #4f46e5; }
+.icon.green { background: #10b981; }
+.icon.orange { background: #f97316; }
+.icon.purple { background: #a855f7; }
+.icon.teal { background: #14b8a6; }
+.icon.violet { background: #6366f1; }
+
+/* ✅ Mobile Responsive Styles */
+@media (max-width: 768px) {
+  /* Hero Section */
+  .home-title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .home-subtitle {
+    font-size: 16px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  /* ✅ Keep input + search button in one row */
+  .search-bar {
+    flex-direction: row;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 20px auto;
+  }
+
+  .search-bar input {
+    flex: 1;
+    width: auto; /* allow flex to handle width */
+  }
+
+  /* ✅ Keep Browse / Post buttons side by side */
+  .button-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .browse-btn,
+  .post-btn {
+    flex: 1;
+    max-width: 160px;
+    text-align: center;
+  }
+
+  /* Features grid becomes single column */
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Audience cards stack vertically */
+  .audience-section {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .audience-card {
+    width: 100%;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 24px;
+  }
+
+  .home-subtitle {
+    font-size: 14px;
+  }
+
+  .features-title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .features-subtitle {
+    font-size: 14px;
+    text-align: center;
+    padding: 0 8px;
+  }
+
+  .audience-card ul {
+    padding-left: 20px;
+  }
+}

@@ -1,0 +1,138 @@
+/* Job Listings Page Background */
+.job-listings-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: linear-gradient(to right, #1e3c72, #2a5298); /* same as homepage */
+  font-family: Arial, sans-serif;
+  color: #000; /* default font color black */
+}
+
+/* Job Listings Heading */
+.job-listings-page h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff; /* keep heading white for contrast */
+}
+
+/* Filters Row */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filters input,
+.filters select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+/* Job Card */
+.job-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  color: #000; /* job text black */
+}
+
+/* Job Title */
+.job-card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000; /* black title */
+  margin-bottom: 10px;
+}
+
+/* Company Logo */
+.job-card img {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+/* Apply Button */
+.apply-btn {
+  background: #2575fc;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.apply-btn:hover {
+  background: #6a11cb;
+}
+
+/* -------------------- */
+/* ✅ Mobile Responsive */
+/* -------------------- */
+@media (max-width: 768px) {
+  .job-listings-page {
+    padding: 15px;
+  }
+
+  .job-listings-page h2 {
+    font-size: 1.6rem;
+  }
+
+  /* Filters stack vertically */
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .filters input,
+  .filters select {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  /* Job Card full width */
+  .job-card {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .job-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .apply-btn {
+    width: 100%; /* button spans full width */
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .job-listings-page h2 {
+    font-size: 1.4rem;
+  }
+
+  .filters input,
+  .filters select {
+    font-size: 0.9rem;
+    padding: 7px;
+  }
+
+  .job-card h3 {
+    font-size: 1rem;
+  }
+
+  .apply-btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

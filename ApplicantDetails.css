@@ -1,0 +1,24 @@
+.applicant-details {
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to right, #1e3c72, #2a5298); /* same as homepage */
+  color: #fff; /* keep text visible */
+  font-family: Arial, sans-serif;
+}
+
+/* ✅ Responsive design for tablets */
+@media (max-width: 768px) {
+  .applicant-details {
+    padding: 15px;
+    text-align: center; /* center align on tablet */
+  }
+}
+
+/* ✅ Responsive design for mobile phones */
+@media (max-width: 480px) {
+  .applicant-details {
+    padding: 10px;
+    font-size: 14px; /* smaller text for readability */
+    text-align: center;
+  }
+}
